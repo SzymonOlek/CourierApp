@@ -1,0 +1,104 @@
+
+
+#Service{	
+	-fx-border-radius: 55px;
+	-fx-font-size: 20px;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	-fx-transition: 1s;
+
+	-fx-text-fill : Black;
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+}
+
+#cennik{
+	
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+	
+	-fx-font-size: 20px;
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+#cennik:hover{
+	
+		-fx-background-color: rgb(255, 136, 0);
+	
+}
+
+#kontakt:hover{
+	
+	
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	
+	
+	
+	
+}
+
+
+#Service:hover{
+
+	-fx-background-color: rgb(255, 136, 0);
+
+}
+
+
+#kontakt{
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+	-fx-font-size: 20px;
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+#kontakt:hover{
+	
+		-fx-background-color: rgb(255, 136, 0);
+	
+}
+
+#title{
+	
+	-fx-text-fill : white;
+
+}
+
+#klient{
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : black;
+}
+#klient:hover{
+	
+		-fx-background-color: rgb(255, 136, 0);
+	
+}
+
+#pracownik{
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+
+		-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : black;
+}
+#pracownik:hover{
+	
+		-fx-background-color: rgb(255, 136, 0);
+	
+}
+
+#background{
+
+-fx-background-color: radial-gradient(rgb(19, 2, 110),rgb(79, 121, 236));
+
+-fx-background-color: radial-gradient(radius 180%,rgb(19, 2, 110), derive(rgb(79, 121, 236), 20%));
+
+
+
+}

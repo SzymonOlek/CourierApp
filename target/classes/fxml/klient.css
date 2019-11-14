@@ -1,0 +1,47 @@
+#klientBackground{
+	
+	-fx-background-color: #264E36;
+	
+	
+	
+}
+
+
+#logOut{
+	
+	-fx-background-color: #FFDC00;
+
+	-fx-font-size: 20px;
+	
+	-fx-text-fill : black;
+
+}
+
+
+#checkOrder{
+	
+	-fx-font-size: 20px;
+	
+	-fx-text-fill : black;
+	
+	-fx-background-color: #FFDC00;
+}
+
+
+#addOrder{
+	
+	-fx-font-size: 20px;
+	
+	-fx-text-fill : black;
+	
+	-fx-background-color: #FFDC00;
+}
+
+#deleteOrder{
+	
+	-fx-font-size: 20px;
+	
+	-fx-text-fill : black;
+	
+	-fx-background-color: #FFDC00;
+}

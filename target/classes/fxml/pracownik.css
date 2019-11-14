@@ -1,0 +1,15 @@
+
+#pracownikBackground{
+	
+	-fx-background-color: #577284;
+}
+
+
+#back{
+	
+	-fx-font-size: 20px;
+	
+	-fx-text-fill : black;
+	
+	-fx-background-color: #FFDC00;
+}
