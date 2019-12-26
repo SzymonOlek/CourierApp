@@ -1,15 +1,46 @@
 
 #pracownikBackground{
 	
-	-fx-background-color: #577284;
+	
+	
+-fx-background-color: radial-gradient(rgb(231, 229, 241),rgb(57, 85, 161));
+-fx-background-color: radial-gradient(radius 180%,rgb(220, 219, 231), derive(rgb(57, 81, 146), 20%));
+	
+	
 }
-
 
 #back{
 	
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+	
 	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+#route{
 	
-	-fx-text-fill : black;
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
 	
-	-fx-background-color: #FFDC00;
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+#checkOrd{
+	
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 3px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
 }

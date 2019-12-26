@@ -5,8 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.StackPane?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.OrderController">
+<StackPane fx:id="checkOrderBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@checkOrder.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.OrderController">
    <children>
       <TextField fx:id="textFieldChechOrder" alignment="CENTER" maxWidth="250.0" minWidth="250.0" prefHeight="25.0" prefWidth="250.0" promptText="Wpisz numer zamówienia">
          <StackPane.margin>

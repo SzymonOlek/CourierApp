@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<StackPane fx:id="klientBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@kontakt.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.KontaktController">
+   <children>
+      <Button fx:id="returnKontakt" mnemonicParsing="false" onAction="#returnKontaktOnAction" text="Powrót">
+         <StackPane.margin>
+            <Insets left="350.0" top="250.0" />
+         </StackPane.margin>
+      </Button>
+      <Label text="Adres : Kraków ul. Krakowska 111a">
+         <StackPane.margin>
+            <Insets bottom="150.0" top="50.0" />
+         </StackPane.margin>
+      </Label>
+      <Label text="Kontakt">
+         <StackPane.margin>
+            <Insets bottom="250.0" right="200.0" />
+         </StackPane.margin>
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label text="Tel komórkowy : 123 456 789">
+         <StackPane.margin>
+            <Insets bottom="50.0" top="50.0" />
+         </StackPane.margin>
+      </Label>
+      <Label text="Tel stacjonarny : +41 121 12 34">
+         <StackPane.margin>
+            <Insets top="50.0" />
+         </StackPane.margin>
+      </Label>
+      <Label text="FAX : (22) 111 11 22">
+         <StackPane.margin>
+            <Insets top="100.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
 </StackPane>
-

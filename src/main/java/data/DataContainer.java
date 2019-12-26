@@ -19,7 +19,11 @@ public class DataContainer {
 
 	private static ArrayList<String> namesOfCities = new ArrayList<String>();
 
-	public DataContainer() {}
+	public DataContainer() {
+		
+		
+		
+	}
 	
 	public DataContainer(String srcFileCity, String srcFileData) {
 
@@ -87,6 +91,8 @@ public class DataContainer {
 			if (inNames != null)
 				inNames.close();
 		}
+		
+		
 
 	}
 	

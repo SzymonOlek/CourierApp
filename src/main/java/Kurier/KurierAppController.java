@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SplitMenuButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 
@@ -34,6 +36,9 @@ public class KurierAppController {
 
 	@FXML
 	private Button pracownik;
+	
+    @FXML
+    private SplitMenuButton menuButton;
 
 	public KurierAppController() {
 
@@ -44,8 +49,23 @@ public class KurierAppController {
 	}
 
 	@FXML
-	void OnActionCennik(ActionEvent event) {
-		klient.setDisable(true);
+	void OnActionCennik(ActionEvent event) throws IOException {
+       
+		System.out.println("Cennik");
+    	
+    	FXMLLoader loader = new FXMLLoader();
+
+		loader.setLocation(this.getClass().getResource("/fxml/Cennik.fxml"));
+
+		StackPane stackPane = (StackPane) loader.load();
+
+		Scene scene = new Scene(stackPane);
+    	
+		klasaStage.nextStage.setTitle("APLIKACJA");
+		
+		klasaStage.scene=scene;
+		klasaStage.show();
+		
 	}
 
 	@FXML
@@ -66,9 +86,25 @@ public class KurierAppController {
 	}
 
 	@FXML
-	void OnActionKontakt(ActionEvent event) {
+	void OnActionKontakt(ActionEvent event) throws IOException {
 
+       	System.out.println("Kontakt");
+    	
+    	FXMLLoader loader = new FXMLLoader();
 
+		loader.setLocation(this.getClass().getResource("/fxml/Kontakt.fxml"));
+
+		StackPane stackPane = (StackPane) loader.load();
+
+		Scene scene = new Scene(stackPane);
+    	
+		klasaStage.nextStage.setTitle("APLIKACJA");
+		
+		klasaStage.scene=scene;
+		klasaStage.show();
+		
+		
+		
 	}
 
 	@FXML
@@ -90,17 +126,52 @@ public class KurierAppController {
 	}
 
 	@FXML
-	void ServiceAction(ActionEvent event) {
+	void ServiceAction(ActionEvent event) throws IOException {
 
-		System.out.println("Najlepsza droga : " + new DataContainer().getBestRoute());
+		System.out.println("Us³ugi");
 
+    	FXMLLoader loader = new FXMLLoader();
+
+		loader.setLocation(this.getClass().getResource("/fxml/DostepneUslugi.fxml"));
+
+		StackPane stackPane = (StackPane) loader.load();
+
+		Scene scene = new Scene(stackPane);
+    	
+		klasaStage.nextStage.setTitle("APLIKACJA");
+		
+		klasaStage.scene=scene;
+		klasaStage.show();
+		
 
 	}
 
+	
 	@FXML
-	void onMouseEnteredService(MouseEvent event) {
+    private MenuItem miasto1Button;
+	
+	   @FXML
+	    void onActionMiasto1(ActionEvent event) {
 
+		   menuButton.setText("miasto1");
+		   System.out.println("miasto1");
+		   
+		   
+	    }
+	   
+	    @FXML
+	    void onActionMenuButton(ActionEvent event) {
 
-	}
+			   System.out.println("miasto1");
+			   menuButton.setText("miasto1");
+			   System.out.println("miasto2");
+			   menuButton.setText("miasto2");
+	    	
+	    }
+	
+	
+	
+	
+	
 
 }

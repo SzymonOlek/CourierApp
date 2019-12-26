@@ -45,18 +45,42 @@ public class pracownikController {
     
   
     @FXML
-    void onActionCheckOrd(ActionEvent event) {
+    void onActionCheckOrd(ActionEvent event) throws IOException {
 
     	
-    	System.out.println("sprawdzanie zamowienia");
+    	FXMLLoader loader = new FXMLLoader();
+
+		loader.setLocation(this.getClass().getResource("/fxml/CheckOrder.fxml"));
+
+		StackPane stackPane = (StackPane) loader.load();
+
+		Scene scene = new Scene(stackPane);
     	
+		klasaStage.nextStage.setTitle("APLIKACJA");
+		
+		klasaStage.scene=scene;
+		klasaStage.show();
+		
     }
 
     @FXML
-    void onActionRoute(ActionEvent event) {
+    void onActionRoute(ActionEvent event) throws IOException {
 
     	
     	System.out.println("wyznaczanie trasy");
+    	FXMLLoader loader = new FXMLLoader();
+
+		loader.setLocation(this.getClass().getResource("/fxml/KurierApp.fxml"));
+
+		StackPane stackPane = (StackPane) loader.load();
+
+		Scene scene = new Scene(stackPane);
+    	
+		klasaStage.nextStage.setTitle("APLIKACJA");
+		
+		klasaStage.scene=scene;
+		klasaStage.show();
+		
     }
 
 	
