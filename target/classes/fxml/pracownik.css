@@ -1,23 +1,59 @@
 
 #pracownikBackground{
 	
-	
-	
--fx-background-color: radial-gradient(rgb(231, 229, 241),rgb(57, 85, 161));
--fx-background-color: radial-gradient(radius 180%,rgb(220, 219, 231), derive(rgb(57, 81, 146), 20%));
+	-fx-background-color: radial-gradient(rgb(231.0, 229.0, 241.0),rgb(57.0, 85.0, 161.0));
+	-fx-background-color: radial-gradient(radius 180.0%,rgb(220.0, 219.0, 231.0), derive(rgb(57.0, 81.0, 146.0), 20.0%));
 	
 	
 }
 
+#checkPasswordBackground{
+	
+	-fx-background-color: radial-gradient(rgb(231.0, 229.0, 241.0),rgb(57.0, 85.0, 161.0));
+	-fx-background-color: radial-gradient(radius 180.0%,rgb(220.0, 219.0, 231.0), derive(rgb(57.0, 81.0, 146.0), 20.0%));
+	
+}
+
+#changeOrderStatus{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}
+#acceptPassword{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}
+
+#backCheckPassowrd{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}
 #back{
 	
 	-fx-cursor:  HAND;
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	
 	
-	-fx-font-size: 20px;
-	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
 	-fx-text-fill : Black;
 }
 
@@ -25,11 +61,11 @@
 	
 	-fx-cursor:  HAND;
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	
 	
-	-fx-font-size: 20px;
-	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
 	-fx-text-fill : Black;
 }
 
@@ -37,10 +73,10 @@
 	
 	-fx-cursor:  HAND;
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	
 	
-	-fx-font-size: 20px;
-	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
 	-fx-text-fill : Black;
 }

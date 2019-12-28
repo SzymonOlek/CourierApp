@@ -1,7 +1,7 @@
 #Service{	
 	-fx-font-size: 20px;
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	-fx-transition: 1s;
 	-fx-text-fill : Black;
 	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
@@ -11,48 +11,22 @@
 #cennik{
 	-fx-cursor:  HAND;
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	
 	
 	-fx-font-size: 20px;
 	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
 	-fx-text-fill : Black;
-}
-
-#cennik:hover{
-	-fx-cursor:  HAND;	
-	-fx-background-color: rgb(255, 136, 0);
-	
-}
-
-#kontakt:hover{
-	
-	-fx-cursor:  HAND;
-	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
-		
-}
-
-
-#Service:hover{
-
-	-fx-background-color: rgb(255, 136, 0);
-
 }
 
 
 #kontakt{
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	-fx-cursor:  HAND;
 	-fx-font-size: 20px;
 	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
 	-fx-text-fill : Black;
-}
-
-#kontakt:hover{
-	
-	-fx-background-color: rgb(255, 136, 0);
-	
 }
 
 #title{
@@ -63,15 +37,10 @@
 
 #klient{
 	-fx-border-color: #001f3f;
-	-fx-border-width: 3px;			
+	-fx-border-width: 2px;			
 	-fx-cursor:  HAND;
 	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
 	-fx-text-fill : black;
-}
-#klient:hover{
-	
-	-fx-background-color: rgb(255, 136, 0);
-	
 }
 
 #pracownik{
@@ -79,12 +48,7 @@
 	-fx-cursor:  HAND;
 	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
 	-fx-text-fill : black;
-	-fx-border-width: 3px;	
-}
-#pracownik:hover{
-	
-	-fx-background-color: rgb(255, 136, 0);
-	
+	-fx-border-width: 2px;	
 }
 
 #background{

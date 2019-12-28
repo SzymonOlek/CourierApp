@@ -113,7 +113,7 @@ public class KurierAppController {
 		System.out.println("PRACOWNIK");
 		FXMLLoader loader = new FXMLLoader();
 
-		loader.setLocation(this.getClass().getResource("/fxml/pracownik.fxml"));
+		loader.setLocation(this.getClass().getResource("/fxml/checkPassword.fxml"));
 
 		StackPane stackPane = (StackPane) loader.load();
 

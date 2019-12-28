@@ -11,7 +11,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import data.DataContainer;
-import data.Database;
+import data.Server;
 
 
 
@@ -39,6 +39,11 @@ public class Main extends Application {
 //		tempData.printData();	
 //		
 		launch(args);
+		
+//		Server server = new Server();
+		
+//		server.useServer("zapis do serwera");
+		
 	}
 
 	@Override

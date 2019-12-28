@@ -2,8 +2,7 @@ package Kurier;
 
 import java.io.IOException;
 
-
-import data.Database;
+import data.Server;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -135,29 +134,6 @@ public class klientControler {
     @FXML
     private TextField weight;
 
-//    @FXML
-//    private TextField adressTo;
-//
-//    @FXML
-//    private TextField postCodeTo1;
-//
-//    @FXML
-//    private TextField postCodeTo2;
-//
-//    @FXML
-//    private TextField adressFrom;
-//
-//    @FXML
-//    private TextField postCodeFrom1;
-//
-//        @FXML
-//    private MenuButton adressTo;
-//
-//    @FXML
-//    private MenuButton adressFrom;
-//    @FXML
-//    private TextField postCodeFrom2;
-
     @FXML
     private TextField tel;
 
@@ -182,11 +158,10 @@ public class klientControler {
 		
 		Order order = new Order(firstName.getText(),secondName.getText(),Integer.valueOf(weight.getText()),Integer.valueOf(high.getText()),Integer.valueOf(width.getText()),Integer.valueOf(length.getText()),adressTo.getText(),adressFrom.getText(),tel.getText());
 		
-		Database baza = new Database();
+		Server server = new Server();
 		
-		baza.addOrder(order);
-
-		stringdataToShow = "Numer zamówienia to : " + baza.getMaxID(); //////////// TODO naprawiæ 
+		server.addOrder(order);
+		
 		
 		firstName.clear();
 		secondName.clear();
@@ -213,15 +188,7 @@ public class klientControler {
 		klasaStage.show();
 		}
 		else {
-//			firstName.clear();
-//			secondName.clear();
-//			weight.clear();
-//			high.clear();
-//			width.clear();
-//			length.clear();
-//			adressTo.setText("Wybierz adres wysylki");
-//			adressFrom.setText("Wybierz adres dostawy");
-//			tel.clear();
+
 		}
 		
 	}
@@ -414,7 +381,14 @@ public class klientControler {
 	        @FXML
 	        void ReadData(MouseEvent event) {
 
-	        	dataToShow.setText(stringdataToShow);
+	        	Server server = new Server();
+	        	
+	        	int id = server.getMaxOrderID();
+	        	
+	        	String order = server.getOrderByID(id);
+	        	
+	        	
+	        	dataToShow.setText("Numer zamówienia to " + id +"\n" +order);
 	        	
 	        }
 

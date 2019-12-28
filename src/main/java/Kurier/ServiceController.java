@@ -23,7 +23,7 @@ public class ServiceController {
     void returnServiceOnAction(ActionEvent event) throws IOException {
 
     	
-		System.out.println("Us³ugi");
+		System.out.println("Uslugi");
 
     	FXMLLoader loader = new FXMLLoader();
 

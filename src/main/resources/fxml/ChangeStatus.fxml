@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="checkOrderBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@checkOrder.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.OrderController">
+   <children>
+      <TextField fx:id="textFieldStatus" alignment="CENTER" maxWidth="250.0" minWidth="250.0" prefHeight="25.0" prefWidth="250.0" promptText="Wpisz numer zamówienia">
+         <StackPane.margin>
+            <Insets bottom="100.0" />
+         </StackPane.margin>
+      </TextField>
+      <Button fx:id="checkStatusChange" mnemonicParsing="false" onAction="#onActionCheckStatusChange" text="Sprawdż">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </Button>
+      <Button fx:id="backChangeStatus" mnemonicParsing="false" onAction="#onActionbackChangeStatus" text="Powrót">
+         <StackPane.margin>
+            <Insets left="375.0" top="250.0" />
+         </StackPane.margin>
+      </Button>
+      <Label fx:id="textToChangeStatus">
+         <StackPane.margin>
+            <Insets bottom="250.0" />
+         </StackPane.margin></Label>
+      <RadioButton fx:id="RadioDostarczone" mnemonicParsing="false" onAction="#OnActionDostarczone" text="dostarczone">
+         <StackPane.margin>
+            <Insets left="150.0" top="100.0" />
+         </StackPane.margin>
+      </RadioButton>
+      <RadioButton fx:id="RadioRealizacja" mnemonicParsing="false" onAction="#OnActionRealizacja" text="w realizacji">
+         <StackPane.margin>
+            <Insets right="150.0" top="100.0" />
+         </StackPane.margin>
+      </RadioButton>
+      <Button fx:id="changeStatus" mnemonicParsing="false" onAction="#OnActionChangeStatus" text="Zmien status">
+         <StackPane.margin>
+            <Insets top="250.0" />
+         </StackPane.margin>
+      </Button>
+   </children>
+</StackPane>

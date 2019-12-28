@@ -7,3 +7,83 @@
 	
 	
 }
+#checkCheckOrderemploy{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+#backCheckOrderEmploy{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+#backCheckOrder{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+#checkCheckOrder{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+
+
+
+
+#checkStatusChange{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+#backChangeStatus{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+#changeStatus{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20px;
+	-fx-background-color:  linear-gradient(rgb(255, 136, 0),rgb(206, 22, 22));
+	-fx-text-fill : Black;
+}
+
+
+

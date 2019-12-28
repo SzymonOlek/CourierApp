@@ -7,7 +7,7 @@
 
 <StackPane fx:id="klientBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#ReadData" prefHeight="400.0" prefWidth="600.0" stylesheets="@klient.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.klientControler">
    <children>
-      <Label fx:id="dataToShow" text="TEXT">
+      <Label fx:id="dataToShow">
          <StackPane.margin>
             <Insets bottom="100.0" />
          </StackPane.margin>
