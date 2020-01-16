@@ -18,32 +18,10 @@ import data.Server;
 public class Main extends Application {
 
 	public static void main(String[] args) {
-		
-		
-//		Database bazaDanych = new Database();
-//		
-////		ResultSet  wynik = bazaDanych.sqlStatement("SELECT * FROM `order`");
-//		ResultSet wynik = bazaDanych.getOrder(1);
-//		
 	
-
-//		bazaDanych.showData(wynik);
-//		bazaDanych.showData(bazaDanych.getOrder(1));
-		
-		
-//		bazaDanych.execSQLStatement("INSERT INTO `city` (`id_city`, `name`) VALUES ('1', 'miasto1');"); //chec if correct
-		
-		
-//		DataContainer tempData = new DataContainer("miasta.txt", "graph.txt");
-//		
-//		tempData.printData();	
-//		
 		launch(args);
 		
-//		Server server = new Server();
-		
-//		server.useServer("zapis do serwera");
-		
+
 	}
 
 	@Override
