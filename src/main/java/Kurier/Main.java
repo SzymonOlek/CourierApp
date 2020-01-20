@@ -6,12 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-
-import data.DataContainer;
-import data.Server;
+import algorithms.Algorithm;
 
 
 
@@ -21,7 +16,22 @@ public class Main extends Application {
 	
 		launch(args);
 		
-
+//		Algorithm a = new Algorithm();
+//										 
+//		int [][] matrix = new int[][] { { 0, 5, 11, 4}, 
+//										{ 5, 0, 7, 7},
+//										{ 11, 7, 0, 8}, 
+//										{ 4, 7, 8, 0},
+//		};
+//				
+//		a.minCost(matrix);
+//		String lastTrace = a.GetLastTrace();
+//		int [] trace = a.parseToint(lastTrace, "->");
+//		
+//		for(int i=0;i<trace.length;i++)
+//			System.out.println(trace[i]);
+//		
+//		
 	}
 
 	@Override

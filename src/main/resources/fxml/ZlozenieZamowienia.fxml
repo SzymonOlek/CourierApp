@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane fx:id="makeOrderBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#mouseBackground" prefHeight="400.0" prefWidth="600.0" stylesheets="@zlozenie.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.klientControler">
+<StackPane fx:id="makeOrderBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#mouseBackground" prefHeight="400.0" prefWidth="600.0" stylesheets="@zlozenie.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kurier.makeOrderController">
    <children>
       <Button fx:id="newOrderAccept" mnemonicParsing="false" onAction="#onActionAccept" text="Zatwierdz">
          <StackPane.margin>

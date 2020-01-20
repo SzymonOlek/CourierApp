@@ -1,0 +1,28 @@
+#calculatingBackground{
+	
+	-fx-background-color: radial-gradient(rgb(231.0, 229.0, 241.0),rgb(57.0, 85.0, 161.0));
+	-fx-background-color: radial-gradient(radius 180.0%,rgb(220.0, 219.0, 231.0), derive(rgb(57.0, 81.0, 146.0), 20.0%));
+	
+	
+}
+#calculate{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}
+
+#show{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}

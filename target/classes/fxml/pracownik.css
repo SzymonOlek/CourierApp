@@ -14,6 +14,17 @@
 	
 }
 
+#route2{
+	-fx-cursor:  HAND;
+	-fx-border-color: #001f3f;
+	-fx-border-width: 2px;			
+	
+	
+	-fx-font-size: 20.0px;
+	-fx-background-color:  linear-gradient(rgb(255.0, 136.0, 0.0),rgb(206.0, 22.0, 22.0));
+	-fx-text-fill : Black;
+}
+
 #changeOrderStatus{
 	-fx-cursor:  HAND;
 	-fx-border-color: #001f3f;

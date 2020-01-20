@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import server01.Order;
 
@@ -17,9 +18,6 @@ public class Database {
 	final String url = "jdbc:mysql://localhost:3306/kurier?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
 	Connection con;
-	
-	
-// TODO przerobic baze danych na serwer
 	
 	public Database(){
 		
@@ -118,7 +116,6 @@ public class Database {
 					wynik += "\nNazwisko zamawiajacego: " +(String) obj;
 					obj  = result.getObject(4);
 					wynik += "\nWaga przesylki: " +(int) obj;
-					
 					obj  = result.getObject(5);
 					int x,y,z;
 					x=(int) obj;
@@ -154,7 +151,7 @@ public class Database {
 		
 		this.execSQLStatement("INSERT INTO `order` (`name`, `surname`, `weight`, `high`, `width`, `length`, `adressTo`, `adressFrom`, `phoneNumber`) "
 				+ "VALUES ('"+o.getName() +"', '"+o.getSurname()+"', '"+o.getWeight()+"', '"+o.getHigh()+"', '"+o.getWidth()+"', '"+o.getLength()+
-				"', '"+o.getAdressTo()+"', '"+o.getAdressTo()+"', '"+o.getPhoneNumber()+"');");
+				"', '"+o.getAdressTo()+"', '"+o.getAdressFrom()+"', '"+o.getPhoneNumber()+"');");
 	}
 	
 	public void showData(ResultSet wynik) {
@@ -203,6 +200,45 @@ public class Database {
 				
 	}
 
+	public ArrayList<String> getCities() {
+		
+		
+		Statement stmt=null;
+		ResultSet result=null;
+		
+		try {
+		stmt = con.createStatement();
+		
+		result = stmt.executeQuery("select * from `city`");
+		
+		} catch (SQLException e) {
+			System.out.println("Problem z  zapytaniem sql");
+			e.printStackTrace();
+		}
+		
+		ArrayList<String> namesOFCities = new ArrayList<String> ();
+		
+			try {
+			
+			while(result.next()) {
+					Object obj  = result.getObject(2);
+					namesOFCities.add(obj.toString());
+					System.out.println(obj.toString());
+
+			}
+		
+		
+		} catch (SQLException e) {
+			System.out.println("Blad podczas wypisywania danych z tabeli");
+
+			e.printStackTrace();
+		}
+		
+		
+		return namesOFCities;
+				
+	}
+	
 	
 	public ResultSet getCity() {
 		
@@ -248,6 +284,8 @@ public class Database {
 				
 	}
 	
+	
+	
 	public Integer getMaxID() {
 		
 		
@@ -274,9 +312,6 @@ public class Database {
 			System.out.println("Problem z pobraniem ID zamownia");
 //			e.printStackTrace();
 		}
-		
-		
-		
 		
 		return index;
 	}
@@ -331,6 +366,30 @@ public class Database {
 			
 	}
 	
+	
+	public ResultSet getRoutes() {
+		
+		
+		Statement stmt=null;
+		ResultSet result=null;
+
+		
+		try {
+		stmt = con.createStatement();
+		
+		result = stmt.executeQuery("select * from `connections`");
+		
+
+		
+		
+		} catch (SQLException e) {
+			System.out.println("Problem z  zapytaniem sql");
+			e.printStackTrace();
+		}
+		
+		return result;
+				
+	}
 	
 	
 }

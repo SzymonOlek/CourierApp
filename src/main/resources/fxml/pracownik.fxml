@@ -11,7 +11,7 @@
             <Insets bottom="275.0" left="400.0" />
          </StackPane.margin>
       </Button>
-      <Button fx:id="route" mnemonicParsing="false" onAction="#onActionRoute" text="Wyznacz Trase">
+      <Button fx:id="route" mnemonicParsing="false" onAction="#onActionRoute" text="Wyznacz Trase Pobierania">
          <StackPane.margin>
             <Insets bottom="75.0" />
          </StackPane.margin>
@@ -24,6 +24,11 @@
       <Button fx:id="changeOrderStatus" mnemonicParsing="false" onAction="#onActionChangeStatus" text="Zmien status zlecenia">
          <StackPane.margin>
             <Insets top="175.0" />
+         </StackPane.margin>
+      </Button>
+      <Button fx:id="route2" mnemonicParsing="false" onAction="#onActionRoute2" text="Wyznacz Trase Rozsylania">
+         <StackPane.margin>
+            <Insets bottom="200.0" />
          </StackPane.margin>
       </Button>
    </children>

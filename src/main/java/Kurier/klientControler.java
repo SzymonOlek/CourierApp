@@ -118,111 +118,7 @@ public class klientControler {
 		klasaStage.show();
 
 	}
-
-	@FXML
-	private Button newOrderAccept;
-
-	@FXML
-	private Button newOrderCancel;
-
-    @FXML
-    private TextField firstName;
-
-    @FXML
-    private TextField secondName;
-
-    @FXML
-    private TextField weight;
-
-    @FXML
-    private TextField tel;
-
-    @FXML
-    private TextField high;
-
-    @FXML
-    private TextField width;
-
-    @FXML
-    private TextField length;
-
 	
-	
-	
-	@FXML
-	void onActionAccept(ActionEvent event) throws IOException {
-
-		System.out.println("akceptacja zamowienia");
-
-		if(checkIfCorrect()) {
-		
-		Order order = new Order(firstName.getText(),secondName.getText(),Integer.valueOf(weight.getText()),Integer.valueOf(high.getText()),Integer.valueOf(width.getText()),Integer.valueOf(length.getText()),adressTo.getText(),adressFrom.getText(),tel.getText());
-		
-		Server server = new Server();
-		
-		server.addOrder(order);
-		
-		
-		firstName.clear();
-		secondName.clear();
-		weight.clear();
-		high.clear();
-		width.clear();
-		length.clear();
-		adressTo.setText("Wybierz adres wysylki");
-		adressFrom.setText("Wybierz adres dostawy");
-		tel.clear();
-		
-		FXMLLoader loader = new FXMLLoader();
-
-		loader.setLocation(this.getClass().getResource("/fxml/ShowAddedOrder.fxml"));
-
-		StackPane stackPane = (StackPane) loader.load();
-
-		Scene scene = new Scene(stackPane);
-
-		klasaStage.nextStage.setTitle("APLIKACJA");
-
-		klasaStage.scene = scene;
-
-		klasaStage.show();
-		}
-		else {
-
-		}
-		
-	}
-	
-	private Boolean checkIfCorrect() {
-		
-		
-		if(firstName.getText().trim().isEmpty() || secondName.getText().trim().isEmpty() || weight.getText().trim().isEmpty() || high.getText().trim().isEmpty() || width.getText().trim().isEmpty() || length.getText().trim().isEmpty() || adressTo.getText().trim()=="Wybierz adres dostawy" || adressFrom.getText().trim()=="Wybierz adres wysylki" || tel.getText().trim().isEmpty())
-		{return false;}	
-		else {
-		return true;
-		}
-		
-	}
-
-	@FXML
-	void onActionCancelOrder(ActionEvent event) throws IOException {
-		
-		
-		System.out.println("KLIENT");
-		FXMLLoader loader = new FXMLLoader();
-
-		loader.setLocation(this.getClass().getResource("/fxml/klient.fxml"));
-
-		StackPane stackPane = (StackPane) loader.load();
-
-		Scene scene = new Scene(stackPane);
-
-		klasaStage.nextStage.setTitle("KLIENT");
-
-		klasaStage.scene = scene;
-		klasaStage.show();
-		
-	}
 	
 	  @FXML
 	    private Button resignOrder;
@@ -282,75 +178,14 @@ public class klientControler {
 	    }
 	    
 	    
-	    @FXML
-	    private MenuButton adressTo;
-
-	    @FXML
-	    private MenuItem Miasto0;
-
-	    @FXML
-	    private MenuButton adressFrom;
-
-	    
-
-	    @FXML
-	    void onActionMiasto0(ActionEvent event) {
-
-	    	adressTo.setText("Miasto0");
-	    	System.out.println("Miasto0");
-
-			adressFrom.setText("MAsti123");
-	    }
-
-	    Boolean added =false;
-	    
 			
 	        @FXML
 	        void onActionFirstMenu(MouseEvent event) {
 		    
 	    	
 	        }
-	        @FXML
-	        void mouseBackground(MouseEvent event) {
-	        	if(added==false) {
-	        		
-//	        		List<String> lista = new ArrayList<String>();
-	        		
-	        		for(int i=0;i<10;i++) {
-	        			
-	        			MenuItem temp1 = new MenuItem ("Miasto" + i);
-	        			MenuItem temp2 = new MenuItem ("Miasto" + i);
-	        			
-	        			temp1.setOnAction(new EventHandler<ActionEvent>(){
-	        				 public void handle(ActionEvent e) 
-	        		            { 
-	        		                adressTo.setText(((MenuItem)e.getSource()).getText() ); 
-	        		            } 
-	        				
-	        				}
-						);
-	        			temp2.setOnAction(new EventHandler<ActionEvent>(){
-	        				 public void handle(ActionEvent e) 
-	        		            { 
-	        		                adressFrom.setText(((MenuItem)e.getSource()).getText() ); 
-	        		            } 
-	        				
-	        				}
-						);
-	        			
-	        			
-	        			adressFrom.getItems().add(temp2);
-	        			adressTo.getItems().add(temp1);
-	        		}
-	        		
-	        		
-					
-					
-	        }
-	        	added=true;
-	        }
 	        
-	    
+	        
 	        @FXML
 	        private Label dataToShow;
 	        
@@ -391,5 +226,10 @@ public class klientControler {
 	        	dataToShow.setText("Numer zamówienia to " + id +"\n" +order);
 	        	
 	        }
+	        
+	        
+	          
+	        
+	        
 
 }

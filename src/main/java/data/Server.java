@@ -4,8 +4,10 @@ package data;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
 
 import Kurier.Order;
+import algorithms.ObjectWraper;
 
 public class Server {
 
@@ -220,4 +222,188 @@ public class Server {
 		} 
 
 }
+	public ArrayList<String> getCityNames() {
+		ArrayList<String> o= new ArrayList<String>();
+		String data;
+		
+		try (Socket clientSocket = new Socket("localhost", 5555);
+				DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+				DataInputStream inFromServer = new DataInputStream(clientSocket.getInputStream())) {
+
+			outToServer.writeUTF("GET CITY NAMES");
+
+			while (!(data = inFromServer.readUTF()).equals("#")) {
+				o.add(data);
+			}
+			
+			
+			
+			
+			
+		}
+
+		catch (Exception ex) {
+			ex.printStackTrace();
+		} 
+		
+		
+		return o;
+		
+		
+		
+		
+	}
+	
+	public RoutesWraper getRoutes() {
+		ArrayList<String> Cities= new ArrayList<String>();
+		ArrayList<String> Cities2= new ArrayList<String>();
+		ArrayList<Integer> distance= new ArrayList<Integer>();
+		
+		String data;
+		int [] [] matrix= null;
+		
+		try (Socket clientSocket = new Socket("localhost", 5555);
+				DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+				DataInputStream inFromServer = new DataInputStream(clientSocket.getInputStream())) {
+
+			outToServer.writeUTF("GET ROUTES");			
+			
+			while (!(data = inFromServer.readUTF()).equals("#")) {
+		
+				Cities.add(data);
+				Cities2.add(inFromServer.readUTF());
+				distance.add(inFromServer.readInt());
+			
+			}
+			
+		}
+
+		catch (Exception ex) {
+			ex.printStackTrace();
+		} 
+		
+		RoutesWraper rw = new RoutesWraper(Cities,Cities2,distance);
+		
+		return rw;
+		
+		
+		
+		
+	}
+	public ObjectWraper getOrdersToCalculateSend(int counterinteger) {
+		
+
+		String data;
+		
+		
+		
+		ArrayList<Order> orders = new 	ArrayList<Order>();
+		ArrayList<Integer> ordersID = new 	ArrayList<Integer>();
+		
+		
+		
+		try (Socket clientSocket = new Socket("localhost", 5555);
+				DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+				DataInputStream inFromServer = new DataInputStream(clientSocket.getInputStream())) {
+
+			outToServer.writeUTF("GET ORDERS TO CALCULATE SENDING");
+
+			outToServer.writeInt(counterinteger);
+			
+			while (!(data = inFromServer.readUTF()).equals("#")) {
+			
+				Order ord = new Order();
+				ord.setAdressFrom(data);
+				System.out.println(data);
+				ord.setAdressTo(inFromServer.readUTF());
+				System.out.println(ord.getAdressTo());
+				ord.setName(inFromServer.readUTF());
+				ord.setSurname(inFromServer.readUTF());
+				ord.setPhoneNumber(inFromServer.readUTF());
+				ord.setHigh(inFromServer.readInt());
+				ord.setWeight(inFromServer.readInt());
+				ord.setWidth(inFromServer.readInt());
+				ord.setLength(inFromServer.readInt());
+				ordersID.add(inFromServer.readInt());
+				
+				
+				orders.add(ord);
+				
+			}
+			
+			
+			
+			
+			
+		}
+
+		catch (Exception ex) {
+			ex.printStackTrace();
+		} 
+		ObjectWraper toReturn = new ObjectWraper(orders,ordersID);
+		
+		return toReturn;
+	
+	}
+	
+	
+	public ObjectWraper getOrdersToCalculate(int counterinteger) {
+		
+		String data;
+		
+		
+		ArrayList<Order> orders = new 	ArrayList<Order>();
+		ArrayList<Integer> ordersID = new 	ArrayList<Integer>();
+		
+		
+		
+		try (Socket clientSocket = new Socket("localhost", 5555);
+				DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+				DataInputStream inFromServer = new DataInputStream(clientSocket.getInputStream())) {
+
+			outToServer.writeUTF("GET ORDERS TO CALCULATE");
+			
+			outToServer.writeInt(counterinteger);
+
+			while (!(data = inFromServer.readUTF()).equals("#")) {
+			
+				Order ord = new Order();
+				ord.setAdressFrom(data);
+				System.out.println(data);
+				ord.setAdressTo(inFromServer.readUTF());
+				System.out.println(ord.getAdressTo());
+				ord.setName(inFromServer.readUTF());
+				ord.setSurname(inFromServer.readUTF());
+				ord.setPhoneNumber(inFromServer.readUTF());
+				ord.setHigh(inFromServer.readInt());
+				ord.setWeight(inFromServer.readInt());
+				ord.setWidth(inFromServer.readInt());
+				ord.setLength(inFromServer.readInt());
+				ordersID.add(inFromServer.readInt());
+				
+				
+				orders.add(ord);
+				
+			}
+			
+			
+			
+			
+			
+		}
+
+		catch (Exception ex) {
+			ex.printStackTrace();
+		} 
+		ObjectWraper toReturn = new ObjectWraper(orders,ordersID);
+		
+		return toReturn;
+		
+		
+		
+		
+	}
+	
+	
+	
 }

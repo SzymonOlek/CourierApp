@@ -69,19 +69,10 @@ public class pracownikController {
 
     	
     	System.out.println("wyznaczanie trasy");
-    	FXMLLoader loader = new FXMLLoader();
 
-		loader.setLocation(this.getClass().getResource("/fxml/KurierApp.fxml"));
-
-		StackPane stackPane = (StackPane) loader.load();
-
-		Scene scene = new Scene(stackPane);
     	
-		klasaStage.nextStage.setTitle("APLIKACJA");
-		
-		klasaStage.scene=scene;
-		klasaStage.show();
-		
+    	New_View calculating = new New_View();
+    	
     }
     
     /////////////////////////   check Password fxml
@@ -171,5 +162,20 @@ public class pracownikController {
 		klasaStage.show();
     	
     }
-	
+    @FXML
+    private Button route2;
+
+    @FXML
+    void onActionRoute2(ActionEvent event) {
+
+    	try {
+			New_View calculating = new New_View("temp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	
+    }
+
 }
